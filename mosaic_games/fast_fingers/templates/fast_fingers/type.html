@@ -1,0 +1,15 @@
+{% extends 'fast_fingers/skeleton.html' %}
+
+{% block title %}Start Typing{% endblock %}
+
+{% block content %}
+
+<div class="assinged_input"  onmousedown='return false;' onselectstart='return false;'  >
+{% lorem 20 p random %}
+</div>
+
+<br/>
+
+<textarea name="name" id="user_input" placeholder="Start Typing here .." rows="10" class="form-control">{{ user_input }}</textarea>
+
+ {% endblock %}

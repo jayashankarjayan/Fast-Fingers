@@ -1,0 +1,33 @@
+{% extends 'fast_fingers/skeleton.html' %}
+
+{% block title %}Score Card{% endblock %}
+
+{% block content %}
+
+<table class="table table-responsive table-striped table-hover table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th>#</th>
+      <th>User</th>
+      <th>Score %</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+      <th>Speed (in seconds)</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for record in records %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td>{{ record.username }}</td>
+      <td>{{ record.score }}</td>
+      <td>{{ record.start_time }}</td>
+      <td>{{ record.end_time }}</td>
+      <td>{{ record.speed }}</td>
+    </tr>
+    {% endfor %}
+
+  </tbody>
+</table>
+{% endblock %}

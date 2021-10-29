@@ -1,0 +1,25 @@
+{% extends 'fast_fingers/skeleton.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 mx-auto mt-5">
+
+        <form action="{% url 'authorize' %}" method="POST">
+          {% csrf_token %}
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" placeholder="Enter your LTI Email ID" name="username">
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="password" placeholder="Enter your password" class="form-control">
+          </div>
+          <input type="submit" class="btn btn-dark" name="" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
