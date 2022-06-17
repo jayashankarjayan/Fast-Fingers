@@ -132,3 +132,5 @@ package*.json
 .package*.json
 
 **/node_modules/*
+
+.DS_Store
