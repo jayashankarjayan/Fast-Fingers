@@ -11,7 +11,7 @@ def calculate_score(assinged_input, user_input):
         for word in assinged_input_tokenized:
             if word in user_input_tokenized:
                 total_matching_words += 1
-        score = (total_matching_words / len(assinged_input_tokenized)) * 100
+        score = round((total_matching_words / len(assinged_input_tokenized)) * 100, 2)
         return score
 
 
