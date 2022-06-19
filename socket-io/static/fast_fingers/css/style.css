@@ -14,3 +14,15 @@ min-height: 50vh;
 background: rgb(28, 46, 63);
 color: #ffffff;
 }
+
+/* #user_input, #user_input:focus {
+  background-color: rgb(242, 242, 242);
+  color: rgb(242, 242, 242);
+  border: 0;
+  box-shadow: 0 0 0 rgb(242, 242, 242);
+  outline: none; */
+/* } */
+
+.list-row:first-child > div {
+  border-right: 1px solid black;
+}
